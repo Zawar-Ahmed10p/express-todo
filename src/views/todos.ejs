@@ -1,0 +1,27 @@
+<html>
+
+<body>
+
+</body>
+<div>
+    <h3><%=users.name%></h3>
+    <a href="http://127.0.0.1:8080/todo/add">Add New Task</a>
+    <%for (let i =0; i<users.tasks.length; i++) {%>
+    <div>
+        <br>
+
+        <div>
+
+            <h3><%=users.tasks[i].task.slice(1,10)%>...</h3>
+            <div>
+                <div>
+                    <small>
+                        <a href="/todo/<%=users.tasks[i]._id%>" class="text-muted">Read More</a></small>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <%}%>
+</div>
+
+</html>
